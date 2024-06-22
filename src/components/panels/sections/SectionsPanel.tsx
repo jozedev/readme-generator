@@ -34,14 +34,14 @@ export function SectionsPanel({ addedSections, availableSections, setActiveSecti
 
     return (
         <div className="sections w-full">
-            <Div mainColor='slate-200' backgroundColor='red-500' innerClassName='px-2 h-[88vh]'>
+            <Div outerClassName='bg-red-500' innerClassName='px-2 h-[88vh] bg-slate-200'>
                 <h3 className="text-center text-4xl font-bold my-2 mb-8 tracking-widest">
                     <b className='text-red-500 font-bold text-border text-shadow'>S</b>ections
                 </h3>
                 <div className='w-full flex flex-row pl-2 gap-x-3'>
-                    <Button active={activeSubPanel === 'draft'} outerClassName='w-1/3' backgroundColor='red-500' mainColor='slate-200' onClick={() => setActiveSubPanel('draft')}>Draft</Button>
-                    <Button active={activeSubPanel === 'add'} outerClassName='w-1/3' backgroundColor='red-500' mainColor='slate-200' onClick={() => setActiveSubPanel('add')}>Add</Button>
-                    <Button outerClassName='w-1/3' backgroundColor='black' mainColor='red-500' onClick={() => {
+                    <Button active={activeSubPanel === 'draft'} outerClassName='w-1/3 bg-red-500' innerClassName='bg-slate-200' onClick={() => setActiveSubPanel('draft')}>Draft</Button>
+                    <Button active={activeSubPanel === 'add'} outerClassName='w-1/3 bg-red-500' innerClassName='bg-slate-200' onClick={() => setActiveSubPanel('add')}>Add</Button>
+                    <Button outerClassName='w-1/3 bg-black' innerClassName='bg-red-500' onClick={() => {
                         setFilterValue('')
                         reset()
                     }}>Reset</Button>
@@ -78,9 +78,8 @@ export function SectionsPanel({ addedSections, availableSections, setActiveSecti
                                     {
                                         filteredSections.map(section => (
                                             <Button key={section.id}
-                                                mainColor='slate-200'
-                                                backgroundColor='red-500'
-                                                outerClassName=''
+                                                innerClassName='bg-slate-200'
+                                                outerClassName='bg-red-500'
                                                 onClick={() => { addSection(section) }}>
                                                 {section.name}
                                             </Button>

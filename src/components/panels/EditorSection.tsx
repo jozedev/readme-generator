@@ -34,7 +34,7 @@ export function EditorSection({ activeSection, updateSectionContent }: Readonly<
 
     return (
         <div className="editor w-full h-full">
-            <Div mainColor='slate-200' backgroundColor='blue-500' innerClassName='h-[88vh] overflow-y-scroll pr-4'>
+            <Div outerClassName='bg-blue-500' innerClassName='h-[88vh] overflow-y-scroll pr-4 bg-slate-200'>
                 <h3 className="text-center text-4xl font-bold my-4 mb-8 tracking-widest">
                     <b className='text-blue-500 font-bold text-border text-shadow'>E</b>ditor
                 </h3>

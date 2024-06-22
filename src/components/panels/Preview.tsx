@@ -26,7 +26,7 @@ export function Preview({ addedSections }: Props) {
 
     return (
         <div className="preview w-full h-full">
-            <Div mainColor='slate-200' backgroundColor='green-500' innerClassName='h-[88vh] pr-4'>
+            <Div outerClassName='bg-green-500' innerClassName='h-[88vh] pr-4 bg-slate-200'>
                 <h3 className="text-center font-bold text-4xl my-4 mb-8 tracking-widest">
                     <b className='text-green-500 font-bold text-border text-shadow'>P</b>review
                 </h3>
@@ -50,7 +50,7 @@ export function Preview({ addedSections }: Props) {
                             <div className='w-full flex flex-row pl-2 gap-x-3 my-4'>
                                 <Button
                                     onClick={download}
-                                    outerClassName='mx-auto' backgroundColor='black' mainColor='green-500' innerClassName='flex flex-row items-center gap-2'>
+                                    outerClassName='mx-auto bg-black' innerClassName='flex flex-row items-center gap-2 bg-green-500'>
                                     <FileDownload className='w-8 h-8' />
                                     <span>Download</span>
                                 </Button>
