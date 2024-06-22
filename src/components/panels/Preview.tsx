@@ -1,13 +1,8 @@
 import ReactMarkdown from 'react-markdown'
-import type { ExtraProps } from 'react-markdown'
 import { ReadmeSection } from '../../types';
 import { Div } from '../neobrutalism/Div';
 import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { FileDownload } from '../icons/FileDownload';
-import { Separator } from '../neobrutalism/Separator';
 import { Button } from '../neobrutalism/Button';
 
 interface Props {
@@ -46,25 +41,7 @@ export function Preview({ addedSections }: Props) {
                             <ReactMarkdown
                                 className={'markdown h-[calc(100%-10rem)] overflow-y-scroll'}
                                 remarkPlugins={[remarkGfm]}
-                                rehypePlugins={[rehypeRaw]}
                                 components={{
-                                    code({ className, children, ...props }) {
-                                        const match = /language-(\w+)/.exec(className || '')
-                                        return match ? (
-                                            <SyntaxHighlighter
-                                                PreTag="div"
-                                                language={match[1]}
-                                                {...(props as ExtraProps)}
-                                                style={dracula}
-                                            >
-                                                {String(children).replace(/\n$/, '')}
-                                            </SyntaxHighlighter>
-                                        ) : (
-                                            <code className={className} {...props}>
-                                                {children}
-                                            </code>
-                                        )
-                                    },
                                     a: props => <a {...props} target="_blank" rel="noreferrer" />
                                 }}
                             >

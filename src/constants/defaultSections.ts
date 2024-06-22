@@ -1,6 +1,5 @@
 import dedent from 'dedent';
 import { ReadmeSection } from '../types.d';
-import { v4 as uuidv4 } from 'uuid';
 
 export const DEFAULT_SECTIONS: ReadmeSection[] = [
     {
@@ -24,20 +23,6 @@ export const DEFAULT_SECTIONS: ReadmeSection[] = [
         id: '3',
         name: "Authors",
         content: "\n## Authors\n- [@octokatherine](https://www.github.com/octokatherine)\n"
-    }, {
-        id: uuidv4(),
-        name: "Badges",
-        content: dedent`       
-        ## Badges
-
-        Add badges from somewhere like: [shields.io](https://shields.io/)
-
-        [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-        
-        [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-        
-        [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-        `
     }, {
         id: '4',
         name: 'Api Reference',
@@ -153,5 +138,19 @@ export const DEFAULT_SECTIONS: ReadmeSection[] = [
 
         For support, email fake@fake.com or join our Slack channel.
         `,
+    }, {
+        id: '14',
+        name: "Badges",
+        content: dedent`       
+        ## Badges
+
+        Add badges from somewhere like: [shields.io](https://shields.io/)
+
+        [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+        
+        [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+        
+        [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+        `
     },
 ]
